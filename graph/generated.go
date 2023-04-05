@@ -2935,8 +2935,8 @@ func (ec *executionContext) unmarshalInputNewCourse(ctx context.Context, obj int
 		case "category":
 			var err error
 
-			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("category"))
-			it.Category, err = ec.unmarshalNID2string(ctx, v)
+			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("categoryId"))
+			it.CategoryID, err = ec.unmarshalNID2string(ctx, v)
 			if err != nil {
 				return it, err
 			}
